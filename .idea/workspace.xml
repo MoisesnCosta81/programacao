@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="352a28c3-20e2-4452-95da-e391570edc87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 01/Aula.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 01/primeiro.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/1-variáveis-e-tipos-de-dados.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/2-entrada-e-saída-de-dados.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/3-operadores-aritméticos.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/4-operadores-relacionais.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/5-operadores-lógics.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/6-operadores-de-incremento-e-decremento.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/7-operadores-de-atribuição-aritmétca.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/8-operador-ternário.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/Aula.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 02/Exercícios.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 03/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 04/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 05/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 06/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 07/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 08/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 09/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 10/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 11/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 12/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 13/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Aula 14/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/curso-de-cpp-main/Projeto Final/arquivo.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="30pTfcJctyfs82HNnyxEVF4HJtm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.tarefa3.cpp.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/moisescosta/PROGRAMAÇÃO",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="tarefa3.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PROGRAMAÇÃO" TARGET_NAME="tarefa3.cpp" CONFIG_NAME="tarefa3.cpp">
+      <option name="sourceFile" value="curso-cpp-OxiTech/Aula 02/tarefa3.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.tarefa3.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="352a28c3-20e2-4452-95da-e391570edc87" name="Changes" comment="" />
+      <created>1754323620761</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754323620761</updated>
+      <workItem from="1754323624686" duration="8613000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/curso-cpp-OxiTech/Aula 02/tarefa3.cpp</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
