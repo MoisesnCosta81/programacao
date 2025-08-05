@@ -25,6 +25,7 @@ int main() {
 
         cout << fixed << setprecision(2);
         cout << nome <<", o seu IMC é: "<< imc << " - "<< resultado << endl;
+    /// testando
 
     // Uso do operador ternário: Se a condição
     // for verdadeira, retorna o valor antes dos dois-pontos; senão, o valor depois.
