@@ -15,8 +15,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="352a28c3-20e2-4452-95da-e391570edc87" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;curso-cpp-OxiTech/Aula 02/testecppclions.cpp">
-      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/Aula 02/testecppclions.cpp" beforeDir="false" />
+    <list default="true" id="352a28c3-20e2-4452-95da-e391570edc87" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/Aula 02/output/tarefa3" beforeDir="false" afterPath="$PROJECT_DIR$/curso-cpp-OxiTech/Aula 02/output/tarefa3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-cpp-OxiTech/Aula 02/tarefa3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/curso-cpp-OxiTech/Aula 02/tarefa3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarefa3" beforeDir="false" afterPath="$PROJECT_DIR$/tarefa3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,34 +41,34 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "searchQuery": "teste.cpp",
-      "state": "OPEN",
-      "assignee": "MoisesnCosta81"
+      &quot;searchQuery&quot;: &quot;programacao&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;MoisesnCosta81&quot;
     },
     {
-      "searchQuery": "teste.cpp",
-      "state": "OPEN",
-      "assignee": "MoisesnCosta81",
-      "author": "MoisesnCosta81"
+      &quot;searchQuery&quot;: &quot;teste.cpp&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;MoisesnCosta81&quot;
     },
     {
-      "searchQuery": "programacao",
-      "state": "OPEN",
-      "assignee": "MoisesnCosta81"
+      &quot;searchQuery&quot;: &quot;teste.cpp&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;MoisesnCosta81&quot;,
+      &quot;author&quot;: &quot;MoisesnCosta81&quot;
     }
   ],
-  "lastFilter": {
-    "searchQuery": "programacao",
-    "state": "OPEN",
-    "assignee": "MoisesnCosta81"
+  &quot;lastFilter&quot;: {
+    &quot;searchQuery&quot;: &quot;teste.cpp&quot;,
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MoisesnCosta81&quot;,
+    &quot;author&quot;: &quot;MoisesnCosta81&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/MoisesnCosta81/programacao&quot;,
@@ -75,6 +78,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///home/moisescosta/PROGRAMAÇÃO/curso-cpp-OxiTech/Aula 02/testecppclions.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/moisescosta/PROGRAMAÇÃO/curso-cpp-OxiTech/Aula 02/testecppclions.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://testecppclions.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://testecppclions.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -90,6 +95,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
@@ -102,7 +108,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -128,7 +134,9 @@
       <updated>1754323620761</updated>
       <workItem from="1754323624686" duration="8613000" />
       <workItem from="1754362650023" duration="724000" />
-      <workItem from="1754367803586" duration="2766000" />
+      <workItem from="1754367803586" duration="2129000" />
+      <workItem from="1754373521951" duration="152000" />
+      <workItem from="1754432213920" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="removido arquivo de teste">
       <option name="closed" value="true" />
@@ -138,39 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754368263710</updated>
     </task>
-    <task id="LOCAL-00002" summary="removido arquivo de teste">
+    <task id="LOCAL-00002" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1754369960900</created>
+      <created>1754371700775</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1754369960900</updated>
+      <updated>1754371700775</updated>
     </task>
-    <task id="LOCAL-00003" summary="removido arquivo">
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1754370112244</created>
+      <created>1754371837329</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1754370112244</updated>
+      <updated>1754371837329</updated>
     </task>
-    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;curso-cpp-OxiTech/Aula 02/testecppclions.cpp">
-      <option name="closed" value="true" />
-      <created>1754370451365</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1754370451366</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;curso-cpp-OxiTech/Aula 02/testecppclions.cpp">
-      <option name="closed" value="true" />
-      <created>1754370466419</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1754370466419</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,8 +181,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="removido arquivo de teste" />
-    <MESSAGE value="removido arquivo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;curso-cpp-OxiTech/Aula 02/testecppclions.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;curso-cpp-OxiTech/Aula 02/testecppclions.cpp" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
 </project>
