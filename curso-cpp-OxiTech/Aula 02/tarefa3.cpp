@@ -29,6 +29,7 @@ int main() {
 
         cout << fixed << setprecision(2);
         cout << nome <<", o seu IMC é: "<< imc << " - "<< resultado << endl;
+    /// testando
 
         std::cout << std::string(75, '*') << std::endl;
 
