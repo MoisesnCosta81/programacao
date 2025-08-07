@@ -28,7 +28,7 @@ int idade = 18;
 if (idade >= 18) {
     cout << "Maior de idade";
 }
-```
+
 
 **Observação:**
 Se você tiver vários comandos `if`, **todos** eles serão analisados individualmente. Isso significa que cada condição será avaliada, independentemente das outras.
