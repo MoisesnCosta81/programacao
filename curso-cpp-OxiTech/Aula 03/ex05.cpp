@@ -10,6 +10,7 @@ A saída  do programa deve ser uma frase no seguinte formato: "O reço do produt
 */
 
 #include <iostream>
+#include <cstdlib>// bilbioteca para limpar o terminal
 using namespace std;
 
 int main() {
@@ -47,5 +48,12 @@ else {
     cout << "O preço do produto " << produto << " no dia " << dia << " é de R$" <<  preco * 2 << "\n ";
 }
 
+std::cout << "\nPressione Enter para limpar o terminal...\n";
+    std::cin.ignore(); // Limpa o buffer de entrada
+    std::cin.get();    // Espera o Enter
+
+    system("clear"); // Limpa o terminal no Linux
+
+    // ... o código continua aqui
     return 0;
 }
