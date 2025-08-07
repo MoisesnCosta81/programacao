@@ -15,3 +15,7 @@ elif n2 > n1 :
 else :
     print('Não existe nenhum valor maior, os dois números são IGUAIS.')
 
+# --- Adição para limpar o terminal ---
+input('\n Pressione Enter para limpar o terminal...')
+
+os.system('cls' if os.name == 'nt' else 'clear')
