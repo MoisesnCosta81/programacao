@@ -7,7 +7,7 @@ int main() {
 
     string nome = "Pedro";
     int idade = 30;
-    float peso = 75.8;
+    float peso = 75.8;// float ou 
     char genero = 'M';
 
 
