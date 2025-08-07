@@ -9,11 +9,11 @@ n2 = float(input('Digite a segunda nota:'))
 media = (n1 + n2) / 2
 
 if media < 5:
-    print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[31mReprovado\033[m')
+    print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[31mREPROVADO\033[m')
 elif media >= 5 and media < 7:
-    print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[33mRecuperação\033[m')
+    print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[33mRECUPERAÇÃO\033[m')
 else:
-    print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[32mAprovado\033[m')
+    print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[32mAPROVADO\033[m')
 
     # --- Adição para limpar o terminal ---
 input('\n Pressione Enter para limpar o terminal...')
