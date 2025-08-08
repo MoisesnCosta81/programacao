@@ -4,3 +4,4 @@
  - Isósceles: dois lados iguas.
  - Escaleno: Todos os lados diferentes'''
 
+
