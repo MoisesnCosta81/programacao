@@ -15,6 +15,10 @@ elif media >= 5 and media < 7:
 else:
     print(f'Com as notas {n1} e {n2} a sua média foi {media} - \033[32mAPROVADO\033[m')
 
+
+teste teste
+
+
     # --- Adição para limpar o terminal ---
 input('\n Pressione Enter para limpar o terminal...')
 
