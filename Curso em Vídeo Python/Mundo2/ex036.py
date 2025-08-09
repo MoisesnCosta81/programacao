@@ -9,6 +9,8 @@ print()
 print('*'*75)
 print()
 
+import os
+
 casa = float(input('Qual o valor do imóvel? R$'))
 salário = float(input('Qual o seu salário? R$'))
 anos = int(input('Em quanto anos pretende quitar o imóvel?'))

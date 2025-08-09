@@ -6,6 +6,8 @@ Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.''
 
 from datetime import datetime
 
+import os
+
 anodenascimento = int(input("Digite seu ano de nascimento: "))
 anoatual = datetime.now().year
 idade = anoatual - anodenascimento

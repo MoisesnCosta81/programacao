@@ -3,6 +3,8 @@ de conversão: - 1 para binário
               - 2 para octagonal
               - 3 para hexadecimal'''
 
+
+import os
 num = int(input('Digite um número:'))
 print('''Você deseja converter esse número para:
 \033[33mBINÁRIO\033[m? Digite [1]

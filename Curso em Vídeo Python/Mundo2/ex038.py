@@ -2,7 +2,7 @@
 - o primeiro valor é maior
 - o segundo valor é maior
 - não existe valor maior, os dois são iguais'''
-
+import os
 
 n1 = int(input('Digite um número inteiro: '))
 n2 = int(input('Digite outro número inteiro: '))
@@ -19,3 +19,5 @@ else :
 input('\n Pressione Enter para limpar o terminal...')
 
 os.system('cls' if os.name == 'nt' else 'clear')
+
+
