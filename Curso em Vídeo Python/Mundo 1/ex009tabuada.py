@@ -29,5 +29,6 @@ print('{} x {:2} = {}'.format(n, 7, (n*7)))
 print('{} x {:2} = {}'.format(n, 8, (n*8)))
 print('{} x {:2} = {}'.format(n, 9, (n*9)))
 print('{} x {:2} = {}'.format(n, 10, (n*10)))
-#:2 são espaços à inserir no print para alinhar o testo
+print('\033[m')
+#:2 são espaços à inserir no print para alinhar o texto
 
