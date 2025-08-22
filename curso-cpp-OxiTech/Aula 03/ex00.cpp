@@ -17,16 +17,22 @@ cout << "Digite outro número inteiro: ";
     cin >> n2;
 
 if (n > n2) {
-        cout << "O número digitado (" << n << ")é maior que: " << n2 << ".\n";
+        cout << "\nO número digitado (" << n << ")é maior que: " << n2 << ".\n";
     }
 else if (n2 > n) {
-        cout << "O número digitado (" << n2 << ") é maior que: " << n << ".\n";
+        cout << "\nO número digitado (" << n2 << ") é maior que: " << n << ".\n";
     }
 else {
-        cout << "Os números são iguais:" << n << "=" << n2 << ".\n";
+        cout << "\nOs números são iguais:" << n << "=" << n2 << ".\n";
     }
 
+cin.ignore();// Limpa o buffer de entrada para que cin.get() funcione
+    // Espera o usuário pressionar Enter antes de limpar a tela
+std::cout << "\n--- Pressione ENTER para continuar e limpar a tela ---" << std::endl;
+std::cin.get();
 
+    
+system("clear");// Comando para limpar a tela do terminal
 
 return 0;
 }
