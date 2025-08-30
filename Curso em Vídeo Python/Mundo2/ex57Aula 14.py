@@ -1,4 +1,4 @@
-'''for c in range(1, 11):
+'''for c in range(1, 11):# contador num intervalo de 1 a 10
     print(c)
    '''
 
