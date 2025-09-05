@@ -18,7 +18,6 @@ def setup_database():
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 matricula TEXT NOT NULL UNIQUE,
                 nome TEXT NOT NULL,
-                endereco TEXT,
                 data_nascimento TEXT,
                 endereco TEXT,
                 rg TEXT,
@@ -313,10 +312,6 @@ class App(tk.Tk):
         self.setup_cadastro()
         self.setup_consulta()
         self.setup_relatorio()
-        
-        # Adiciona o botão de Logout na primeira aba, para ficar sempre visível
-        logout_button = ttk.Button(self, text="Sair (Logout)", command=self.logout)
-        logout_button.pack(side=tk.BOTTOM, pady=5)
 
     def setup_cadastro(self):
         titulo = ttk.Label(self.frame_cadastro, text="Cadastro de Pessoas", font=self.fonte_titulo)
@@ -708,52 +703,69 @@ class App(tk.Tk):
 
         # Binda o evento de clique direito
         self.user_tree.bind("<Button-3>", self.show_user_context_menu)
-        self.user_tree.bind('<<TreeviewSelect>>', self.enable_user_buttons)
-
-        btn_frame = ttk.Frame(frame_excluir)
-        btn_frame.pack(pady=5)
+        self.user_tree.bind('<<TreeviewSelect>>', self.on_user_select)
         
-        self.btn_edit_user = ttk.Button(btn_frame, text="Editar Usuário", command=self.edit_user, state=tk.DISABLED)
-        self.btn_edit_user.pack(side="left", padx=5)
-
-        self.btn_excluir_user = ttk.Button(btn_frame, text="Excluir Usuário", command=self.excluir_usuario, state=tk.DISABLED)
-        self.btn_excluir_user.pack(side="left", padx=5)
-
-        # Botão de Logout adicionado aqui
-        #logout_button_tab = ttk.Button(btn_frame, text="Sair (Logout)", command=self.logout)
-        #logout_button_tab.pack(side="right", padx=5)
-        
+        # Carrega os usuários na Treeview
         self.load_users()
-    
-    def show_user_context_menu(self, event):
-        """Exibe o menu de contexto quando o botão direito é clicado no Treeview."""
-        item = self.user_tree.identify_row(event.y)
-        if item:
-            self.user_tree.selection_set(item)
-            self.user_context_menu.post(event.x_root, event.y_root)
+
+        # Adiciona o botão de Resetar Senha
+        btn_reset_password = ttk.Button(frame_excluir, text="Resetar Senha para 'mudar123'", command=self.reset_user_password)
+        btn_reset_password.pack(pady=10)
+        
+        # --- INÍCIO DA MODIFICAÇÃO ---
+        # Adiciona um botão de logout na parte inferior da aba de gerenciamento de usuários
+        btn_logout_user_tab = ttk.Button(self.frame_usuarios, text="Sair (Logout)", command=self.logout)
+        btn_logout_user_tab.pack(side=tk.BOTTOM, pady=20)
+        # --- FIM DA MODIFICAÇÃO ---
+
+    # --- INÍCIO DAS FUNÇÕES ADICIONADAS PARA COMPLETAR O CÓDIGO ---
+
+    def load_users(self):
+        """Carrega ou recarrega os usuários na Treeview."""
+        for i in self.user_tree.get_children():
+            self.user_tree.delete(i)
+        
+        conn = None
+        try:
+            conn = sqlite3.connect('cadastro.db')
+            cursor = conn.cursor()
+            cursor.execute("SELECT id, matricula, login_apelido, username, is_admin FROM usuarios")
+            users = cursor.fetchall()
+            for user in users:
+                is_admin_text = "Sim" if user[4] else "Não"
+                self.user_tree.insert("", "end", values=(user[0], user[1], user[2], user[3], is_admin_text))
+        except sqlite3.Error as e:
+            messagebox.showerror("Erro de Banco de Dados", f"Não foi possível carregar os usuários: {e}")
+        finally:
+            if conn:
+                conn.close()
 
     def add_user(self):
+        """Adiciona um novo usuário ao banco de dados."""
         matricula = self.new_matricula_entry.get()
         login = self.new_login_entry.get()
-        username = self.new_full_name_entry.get()
+        full_name = self.new_full_name_entry.get()
         
-        if not matricula or not login or not username:
-            messagebox.showerror("Erro", "Todos os campos são obrigatórios.")
+        if not matricula or not login or not full_name:
+            messagebox.showerror("Erro", "Todos os campos para adicionar um usuário são obrigatórios.")
             return
+
+        temp_password = "mudar123"
 
         conn = None
         try:
             conn = sqlite3.connect('cadastro.db')
             cursor = conn.cursor()
-            # Senha temporária para o primeiro acesso
-            cursor.execute("INSERT INTO usuarios (matricula, login_apelido, username, is_admin, password) VALUES (?, ?, ?, ?, ?)", 
-                           (matricula, login, username, 0, 'mudar123'))
+            cursor.execute('''
+                INSERT INTO usuarios (matricula, login_apelido, username, password, is_admin)
+                VALUES (?, ?, ?, ?, 0)
+            ''', (matricula, login, full_name, temp_password))
             conn.commit()
-            messagebox.showinfo("Sucesso", f"Usuário '{username}' adicionado com sucesso!\nSenha temporária: mudar123")
+            messagebox.showinfo("Sucesso", f"Usuário '{login}' adicionado com sucesso!\nA senha temporária é 'mudar123'.")
+            self.load_users()
             self.new_matricula_entry.delete(0, tk.END)
             self.new_login_entry.delete(0, tk.END)
             self.new_full_name_entry.delete(0, tk.END)
-            self.load_users()
         except sqlite3.IntegrityError:
             messagebox.showerror("Erro", "O Apelido/Login ou Matrícula já existe.")
         except sqlite3.Error as e:
@@ -762,50 +774,48 @@ class App(tk.Tk):
             if conn:
                 conn.close()
 
-    def load_users(self):
-        self.user_tree.delete(*self.user_tree.get_children())
-        conn = None
-        try:
-            conn = sqlite3.connect('cadastro.db')
-            cursor = conn.cursor()
-            cursor.execute("SELECT id, matricula, login_apelido, username, is_admin FROM usuarios ORDER BY login_apelido ASC")
-            for user in cursor.fetchall():
-                is_admin_text = "Sim" if user[4] else "Não"
-                self.user_tree.insert('', 'end', values=(user[0], user[1], user[2], user[3], is_admin_text))
-        except sqlite3.Error as e:
-            messagebox.showerror("Erro de Banco de Dados", f"Ocorreu um erro: {e}")
-        finally:
-            if conn:
-                conn.close()
-        self.enable_user_buttons()
-    
-    def enable_user_buttons(self, event=None):
-        if self.user_tree.selection():
-            self.btn_edit_user['state'] = tk.NORMAL
-            self.btn_excluir_user['state'] = tk.NORMAL
-        else:
-            self.btn_edit_user['state'] = tk.DISABLED
-            self.btn_excluir_user['state'] = tk.DISABLED
+    def on_user_select(self, event):
+        """Ação a ser executada quando um usuário é selecionado na Treeview."""
+        pass
+
+    def show_user_context_menu(self, event):
+        """Mostra o menu de contexto ao clicar com o botão direito em um item."""
+        selected_item = self.user_tree.identify_row(event.y)
+        if selected_item:
+            self.user_tree.selection_set(selected_item)
+            self.user_context_menu.post(event.x_root, event.y_root)
+
+    def edit_user(self):
+        """Abre a janela de edição para o usuário selecionado."""
+        selected_item = self.user_tree.selection()
+        if not selected_item:
+            messagebox.showerror("Erro", "Por favor, selecione um usuário para editar.")
+            return
+        
+        user_data = self.user_tree.item(selected_item[0])['values']
+        EditUserWindow(self, user_data, self.load_users)
 
     def excluir_usuario(self):
+        """Exclui o usuário selecionado."""
         selected_item = self.user_tree.selection()
         if not selected_item:
             messagebox.showerror("Erro", "Por favor, selecione um usuário para excluir.")
             return
-        
-        user_id = self.user_tree.item(selected_item)['values'][0]
-        login_apelido = self.user_tree.item(selected_item)['values'][2]
 
-        if int(user_id) == 1:
-            messagebox.showerror("Erro", "O usuário 'admin' não pode ser excluído.")
+        user_data = self.user_tree.item(selected_item[0])['values']
+        user_id = user_data[0]
+        user_login = user_data[2]
+
+        if user_login == 'admin':
+            messagebox.showerror("Ação Proibida", "O usuário 'admin' não pode ser excluído.")
             return
 
-        if messagebox.askyesno("Confirmar Exclusão", f"Tem certeza que deseja excluir o usuário '{login_apelido}'?"):
+        if messagebox.askyesno("Confirmar Exclusão", f"Tem certeza que deseja excluir o usuário '{user_login}'?"):
             conn = None
             try:
                 conn = sqlite3.connect('cadastro.db')
                 cursor = conn.cursor()
-                cursor.execute("DELETE FROM usuarios WHERE id = ?", (user_id,))
+                cursor.execute("DELETE FROM usuarios WHERE id=?", (user_id,))
                 conn.commit()
                 messagebox.showinfo("Sucesso", "Usuário excluído com sucesso!")
                 self.load_users()
@@ -814,40 +824,36 @@ class App(tk.Tk):
             finally:
                 if conn:
                     conn.close()
-        
-    def edit_user(self):
+    
+    def reset_user_password(self):
+        """Reseta a senha do usuário selecionado para 'mudar123'."""
         selected_item = self.user_tree.selection()
         if not selected_item:
-            messagebox.showerror("Erro", "Por favor, selecione um usuário para editar.")
+            messagebox.showerror("Erro", "Por favor, selecione um usuário para resetar a senha.")
             return
-        
-        user_data = self.user_tree.item(selected_item)['values']
-        EditUserWindow(self, user_data, self.load_users)
 
+        user_data = self.user_tree.item(selected_item[0])['values']
+        user_id = user_data[0]
+        user_login = user_data[2]
+
+        if messagebox.askyesno("Confirmar Reset", f"Tem certeza que deseja resetar a senha do usuário '{user_login}' para 'mudar123'?"):
+            conn = None
+            try:
+                conn = sqlite3.connect('cadastro.db')
+                cursor = conn.cursor()
+                cursor.execute("UPDATE usuarios SET password = 'mudar123' WHERE id=?", (user_id,))
+                conn.commit()
+                messagebox.showinfo("Sucesso", f"Senha do usuário '{user_login}' resetada com sucesso!")
+            except sqlite3.Error as e:
+                messagebox.showerror("Erro de Banco de Dados", f"Ocorreu um erro: {e}")
+            finally:
+                if conn:
+                    conn.close()
+    # --- FIM DAS FUNÇÕES ADICIONADAS ---
+
+# --- Ponto de Entrada da Aplicação ---
 if __name__ == "__main__":
     setup_database()
     app = App()
     app.mainloop()
-    def setup_user_management(self):
-        titulo = ttk.Label(self.frame_usuarios, text="Gerenciar Usuários", font=self.fonte_titulo)
-        titulo.pack(pady=10)
-        
-        frame_adicionar = ttk.LabelFrame(self.frame_usuarios, text="Adicionar Novo Usuário", padding="10")
-        frame_adicionar.pack(padx=20, pady=10, fill="x")
-
-        # (...) código da criação dos campos e árvore de usuários
-
-        btn_frame = ttk.Frame(frame_excluir)
-        btn_frame.pack(pady=5)
-        
-        self.btn_edit_user = ttk.Button(btn_frame, text="Editar Usuário", command=self.edit_user, state=tk.DISABLED)
-        self.btn_edit_user.pack(side="left", padx=5)
-
-        self.btn_excluir_user = ttk.Button(btn_frame, text="Excluir Usuário", command=self.excluir_usuario, state=tk.DISABLED)
-        self.btn_excluir_user.pack(side="left", padx=5)
-
-        # 🔹 Botão de Logout dentro da aba "Gerenciar Usuários"
-        logout_button_tab = ttk.Button(btn_frame, text="Sair (Logout)", command=self.logout)
-        logout_button_tab.pack(side="right", padx=5)
-        
-        self.load_users()
+    
